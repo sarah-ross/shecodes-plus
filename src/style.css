@@ -64,6 +64,10 @@ h1 {
 	font-size: 64px;
 }
 
+.repository {
+	text-align: center;
+}
+
 #location-button {
 	background: none;
 	border: 1px solid #075fd6;
