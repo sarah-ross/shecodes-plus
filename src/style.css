@@ -1,0 +1,82 @@
+body {
+	background: radial-gradient(
+		circle at 10% 20%,
+		rgb(255, 246, 236) 39.5%,
+		rgba(100, 46, 122, 0.23) 100.2%
+	);
+	font-family: "Exo 2", sans-serif;
+	color: rgb(76, 76, 76);
+}
+
+h1 {
+	font-size: 87px;
+	padding: 15px -20px;
+}
+
+.container1,
+.container2,
+.list-group-item {
+	margin: 0 auto;
+}
+
+.container2,
+.form {
+	padding: 20px;
+}
+
+.container1 {
+	max-width: 800px;
+}
+
+.card,
+.container2 {
+	max-width: max-content;
+}
+
+.city-heading {
+	font-size: 39px;
+	font-weight: 300;
+	margin-top: -14px;
+}
+
+.heading-list {
+	text-align: right;
+	position: relative;
+	right: 10px;
+	top: 10px;
+	list-style: none;
+	line-height: 28px;
+	font-size: 22px;
+}
+
+.list-group-item {
+	padding: 15px 45px;
+}
+
+.list-group-horizontal-sm,
+.list-group,
+.list-group-item {
+	border: 1px #fff;
+	text-align: center;
+}
+
+.weather-icon {
+	font-size: 64px;
+}
+
+#location-button {
+	background: none;
+	border: 1px solid #075fd6;
+	max-width: fit-content;
+	transition: all 175ms ease-in-out;
+}
+
+#location-button:hover {
+	background: #4c4c4c;
+	color: #fff;
+}
+
+#city-and-temp-display {
+	position: relative;
+	left: 15px;
+}
