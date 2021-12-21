@@ -15,8 +15,9 @@ h1 {
 
 .container1,
 .container2,
-.list-group-item {
+.card {
 	margin: 0 auto;
+	border: none;
 }
 
 .container2,
@@ -24,19 +25,23 @@ h1 {
 	padding: 20px;
 }
 
-.container1 {
-	max-width: 800px;
+.list-group .list-group-horizontal .list-group-item {
+	word-wrap: normal;
+	contain: content;
 }
 
-.card,
-.container2 {
-	max-width: max-content;
+.container1 {
+	max-width: 800px;
 }
 
 .city-heading {
 	font-size: 39px;
 	font-weight: 300;
 	margin-top: -14px;
+}
+
+.card {
+	max-width: 800px;
 }
 
 .heading-list {
@@ -49,23 +54,22 @@ h1 {
 	font-size: 22px;
 }
 
-.list-group-item {
-	padding: 15px 45px;
-}
-
-.list-group-horizontal-sm,
-.list-group,
-.list-group-item {
-	border: 1px #fff;
-	text-align: center;
-}
-
 .weather-icon {
-	font-size: 64px;
+	font-size: 62px;
+}
+
+.forecast {
+	text-align: center;
+	padding: 0 15px 0 15px;
 }
 
 .repository {
 	text-align: center;
+	padding: 15px;
+}
+
+.repository a {
+	text-decoration: none;
 }
 
 #location-button {

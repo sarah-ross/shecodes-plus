@@ -13,9 +13,19 @@
 			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
 			crossorigin="anonymous"
 		/>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="src/style.css" />
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<title>Weather Around the World</title>
@@ -23,38 +33,60 @@
 	<body>
 		<div class="container1">
 			<form>
-         <div class="form">
-         <div class="row g-3">
-         <div class="col-sm-7">
-            <input type="text" class="form-control" id="search-form" placeholder="Search for a city here..." aria-label="City">
-			</div>
-         <div class="col-auto">
-            <button type="submit" class="btn btn-primary">Search</button>
-         </div>
-				<button class="btn" id="location-button">Check Your Current Location</button>
-         </div>
-         </div>
+				<div class="form">
+					<div class="row g-3">
+						<div class="col-sm-7">
+							<input
+								type="text"
+								class="form-control"
+								id="search-form"
+								placeholder="Search for a city here..."
+								aria-label="City"
+							/>
+						</div>
+						<div class="col-auto">
+							<button type="submit" class="btn btn-primary">
+								Search
+							</button>
+						</div>
+						<button class="btn" id="location-button">
+							Check Your Current Location
+						</button>
+					</div>
+				</div>
 			</form>
 			<div class="row">
 				<div class="col">
-					<span id="city-and-temp-display"><h1 id="temp">53℉ ☁️</h1><h3 class="city-heading" id="searched-city">New York</h3></span>
+					<span id="city-and-temp-display"
+						><h1 id="temp">53℉ ☁️</h1>
+						<h3 class="city-heading" id="searched-city">
+							New York
+						</h3></span
+					>
 				</div>
 				<div class="col">
 					<ul class="heading-list">
-						<li class="heading-list" id="day-time">Sunday, 6 PM</li>
+						<li class="heading-list" id="day-time">
+							Sunday, 6 PM
+						</li>
 						<li class="heading-list" id="humidity">0%</li>
-						<li class="heading-list" id="description">Cloudy</li>
+						<li class="heading-list" id="description">
+							Cloudy
+						</li>
 						<li class="heading-list" id="wind">Wind</li>
 					</ul>
 				</div>
 			</div>
-         </div>
-         <div class="container2">
+		</div>
+		<div class="container2">
 			<div class="card text-center">
 				<div class="card-header">
 					<ul class="nav nav-pills card-header-pills">
 						<li class="nav-item">
-							<a class="nav-link active" href="#" id="temperature"
+							<a
+								class="nav-link active"
+								href="#"
+								id="temperature"
 								>Temperature</a
 							>
 						</li>
@@ -66,73 +98,83 @@
 						</li>
 					</ul>
 				</div>
-				<div class="card-body">
-					<h5 class="card-title">
-						<em
-							>Values and line graph depending on the data
-							selected will show here</em
-						>
-					</h5>
-					<ul class="list-group list-group-horizontal-sm">
-						<li class="list-group-item">7 PM</li>
-						<li class="list-group-item">10 PM</li>
-						<li class="list-group-item">1 AM</li>
-						<li class="list-group-item">4 AM</li>
-						<li class="list-group-item">7 AM</li>
-						<li class="list-group-item">10 AM</li>
-						<li class="list-group-item">1PM</li>
-					</ul>
-				</div>
-            <div class="card">
-					<div class="card-title">
-               <ul class="list-group list-group-horizontal">
-               <li class="list-group-item">
-                  <div class="weather-icon">🌧</div>
-                  <div class="sun">Sun</div>
-                  <span><strong>56º</strong> 49º</span>
-               </li>
-               <li class="list-group-item">
-                  <div class="weather-icon">🌧</div>
-                  <div class="mon">Mon</div>
-                  <span><strong>51º</strong> 33º</span>
-               </li>
-               <li class="list-group-item">
-                  <div class="weather-icon">☁️</div>
-                  <div class="tue">Tue</div>
-                  <span><strong>44º</strong> 31º</span>
-               </li>
-               <li class="list-group-item">
-                  <div class="weather-icon">☀️</div>
-                  <div class="wed">Wed</div>
-                  <span><strong>48º</strong> 36º</span>
-               </li>
-               <li class="list-group-item">
-                  <div class="weather-icon">🌤</div>
-                  <div class="thu">Thu</div>
-                  <span><strong>56º</strong> 41º</span>
-               </li>
-               <li class="list-group-item">
-                  <div class="weather-icon">🌤</div>
-                  <div class="fri">Fri</div>
-                  <span><strong>47º</strong> 31º</span>
-               </li>
-               <li class="list-group-item">
-                  <div class="weather-icon">🌤</div>
-                  <div class="sat">Sat</div>
-                  <span><strong>42º</strong> 34º</span>
-               </li>
-               <li class="list-group-item">
-                  <div class="weather-icon">🌤</div>
-                  <div class="sun">Sun</div>
-                  <span><strong>44º</strong> 33º</span>
-               </li>
-               </ul>
+				<div class="card">
+					<div class="row">
+						<div class="col">
+							<div class="forecast">
+								<p class="weather-icon">🌧</p>
+								<p class="day">Sun</p>
+								<p class="high-low">
+									<strong>55º</strong> 22º
+								</p>
+							</div>
+						</div>
+						<div class="col">
+							<div class="forecast">
+								<p class="weather-icon">🌥</p>
+								<p class="day">Mon</p>
+								<p class="high-low">
+									<strong>59º</strong> 24º
+								</p>
+							</div>
+						</div>
+						<div class="col">
+							<div class="forecast">
+								<p class="weather-icon">☁️</p>
+								<p class="day">Tue</p>
+								<p class="high-low">
+									<strong>48º</strong> 17º
+								</p>
+							</div>
+						</div>
+						<div class="col">
+							<div class="forecast">
+								<p class="weather-icon">🌤</p>
+								<p class="day">Wed</p>
+								<p class="high-low">
+									<strong>44º</strong> 15º
+								</p>
+							</div>
+						</div>
+						<div class="col">
+							<div class="forecast">
+								<p class="weather-icon">☀️</p>
+								<p class="day">Thu</p>
+								<p class="high-low">
+									<strong>42º</strong> 11º
+								</p>
+							</div>
+						</div>
+						<div class="col">
+							<div class="forecast">
+								<p class="weather-icon">☀️</p>
+								<p class="day">Fri</p>
+								<p class="high-low">
+									<strong>51º</strong> 24º
+								</p>
+							</div>
+						</div>
+						<div class="col">
+							<div class="forecast">
+								<p class="weather-icon">🌤</p>
+								<p class="day">Sat</p>
+								<p class="high-low">
+									<strong>59º</strong> 31º
+								</p>
+							</div>
+						</div>
 					</div>
-      </div>
-	</div>
-</div>
-	<p class="repository">This website was coded by <a href="https://github.com/sarah-ross/shecodes-plus" target="_blank">Sarah Ross 👩‍💻</a></p>
-</div>
-<script src="src/weather.js"></script>
-</body>
+				</div>
+			</div>
+			<p class="repository">
+				This website was coded by
+				<a
+					href="https://github.com/sarah-ross/shecodes-plus"
+					target="_blank"
+					>Sarah Ross 👩‍💻</a
+				>
+			</p>
+		</div>
+		<script src="src/weather.js"></script>
+	</body>
 </html>
