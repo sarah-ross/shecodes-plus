@@ -40,7 +40,7 @@ function displayWeather(response) {
 	let iconElement = document.querySelector("#display-icon");
 	iconElement.setAttribute(
 		"src",
-		`https://openweathermap.org/img/wn/03d@2x.png`
+		`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
 	);
 }
 
