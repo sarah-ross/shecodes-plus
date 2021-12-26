@@ -37,6 +37,11 @@ function displayWeather(response) {
 	);
 	document.querySelector("#description").innerHTML =
 		response.data.weather[0].main;
+	let iconElement = document.querySelector("#display-icon");
+	iconElement.setAttribute(
+		"src",
+		`https://openweathermap.org/img/wn/03d@2x.png`
+	);
 }
 
 function captureCity(event) {

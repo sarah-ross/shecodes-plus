@@ -23,7 +23,7 @@
 			crossorigin
 		/>
 		<link
-			href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="src/style.css" />
@@ -57,12 +57,18 @@
 			</form>
 			<div class="row">
 				<div class="col">
+					<h3 class="city-heading" id="searched-city">
+						New York
+					</h3>
 					<span id="city-and-temp-display"
-						><h1 id="temp">53℉ ☁️</h1>
-						<h3 class="city-heading" id="searched-city">
-							New York
-						</h3></span
-					>
+						>
+						<span class="img-wrapper"><img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="Cloudy" id="display-icon"></span>
+						<h1 id="temp">53</h1>
+						<span
+							><a href="#" id="fahrenheit-link">ºF</a>
+							<a href="#" id="celsius-link"> ºC</a></span
+						></span
+					></span>
 				</div>
 				<div class="col">
 					<ul class="heading-list">
@@ -102,7 +108,7 @@
 					<div class="row">
 						<div class="col">
 							<div class="forecast">
-								<p class="weather-icon">🌧</p>
+								<img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" class="forecast-icon"/>
 								<p class="day">Sun</p>
 								<p class="high-low">
 									<strong>55º</strong> 22º
@@ -111,7 +117,7 @@
 						</div>
 						<div class="col">
 							<div class="forecast">
-								<p class="weather-icon">🌥</p>
+								<img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" class="forecast-icon"/>
 								<p class="day">Mon</p>
 								<p class="high-low">
 									<strong>59º</strong> 24º
@@ -120,7 +126,7 @@
 						</div>
 						<div class="col">
 							<div class="forecast">
-								<p class="weather-icon">☁️</p>
+								<img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" class="forecast-icon"/>
 								<p class="day">Tue</p>
 								<p class="high-low">
 									<strong>48º</strong> 17º
@@ -129,7 +135,7 @@
 						</div>
 						<div class="col">
 							<div class="forecast">
-								<p class="weather-icon">🌤</p>
+								<img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" class="forecast-icon"/>
 								<p class="day">Wed</p>
 								<p class="high-low">
 									<strong>44º</strong> 15º
@@ -138,7 +144,7 @@
 						</div>
 						<div class="col">
 							<div class="forecast">
-								<p class="weather-icon">☀️</p>
+								<img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" class="forecast-icon"/>
 								<p class="day">Thu</p>
 								<p class="high-low">
 									<strong>42º</strong> 11º
@@ -147,7 +153,7 @@
 						</div>
 						<div class="col">
 							<div class="forecast">
-								<p class="weather-icon">☀️</p>
+								<img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" class="weather-icon"/>
 								<p class="day">Fri</p>
 								<p class="high-low">
 									<strong>51º</strong> 24º
@@ -156,7 +162,7 @@
 						</div>
 						<div class="col">
 							<div class="forecast">
-								<p class="weather-icon">🌤</p>
+							<img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" class="weather-icon"/>
 								<p class="day">Sat</p>
 								<p class="high-low">
 									<strong>59º</strong> 31º

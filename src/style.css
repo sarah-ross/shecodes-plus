@@ -1,16 +1,19 @@
 body {
 	background: radial-gradient(
-		circle at 10% 20%,
-		rgb(255, 246, 236) 39.5%,
-		rgba(100, 46, 122, 0.23) 100.2%
+		circle at 0% 0.5%,
+		rgb(241, 241, 242) 0.1%,
+		#e0e2e4 100.2%
 	);
-	font-family: "Exo 2", sans-serif;
+	font-family: "Roboto", sans-serif;
 	color: rgb(76, 76, 76);
 }
 
 h1 {
-	font-size: 87px;
-	padding: 15px -20px;
+	display: inline;
+	position: relative;
+	font-size: 84px;
+	top: 20px;
+	left: 10px;
 }
 
 .container1,
@@ -30,18 +33,17 @@ h1 {
 	contain: content;
 }
 
-.container1 {
+.container1,
+.card {
 	max-width: 800px;
 }
 
 .city-heading {
-	font-size: 39px;
+	font-size: 36px;
 	font-weight: 300;
-	margin-top: -14px;
-}
-
-.card {
-	max-width: 800px;
+	padding-left: 20px;
+	padding-top: 10px;
+	margin-bottom: 0;
 }
 
 .heading-list {
@@ -50,17 +52,23 @@ h1 {
 	right: 10px;
 	top: 10px;
 	list-style: none;
-	line-height: 28px;
+	line-height: 30px;
 	font-size: 22px;
 }
 
-.weather-icon {
-	font-size: 62px;
+.forecast-icon {
+	max-width: 50px;
+	padding-top: 10px;
+	padding-bottom: 8px;
+}
+
+.day {
+	font-size: 20px;
 }
 
 .forecast {
 	text-align: center;
-	padding: 0 15px 0 15px;
+	padding: 15px;
 }
 
 .repository {
@@ -86,5 +94,26 @@ h1 {
 
 #city-and-temp-display {
 	position: relative;
-	left: 15px;
+	left: 20px;
+	top: -13px;
+}
+
+#display-icon {
+	background-color: #b5b5b5;
+	border: 1px solid #b5b5b5;
+	border-radius: 80px;
+	position: relative;
+	width: 90px;
+	right: 5px;
+	top: -5px;
+}
+
+#fahrenheit-link,
+#celsius-link {
+	position: relative;
+	top: -24px;
+	left: 5px;
+	font-size: 22px;
+	text-decoration: none;
+	padding: 1px;
 }
