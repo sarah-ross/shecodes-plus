@@ -22,7 +22,7 @@ if (minutes < 10) {
 	minutes = `0${minutes}`;
 }
 let dayAndTime = document.querySelector("#day-time");
-dayAndTime.innerHTML = `${day}, ${hour}:${minutes}`;
+dayAndTime.innerHTML = `Last updated: ${day}, ${hour}:${minutes}`;
 
 function displayWeather(response) {
 	document.querySelector("h3").innerHTML =
@@ -30,11 +30,13 @@ function displayWeather(response) {
 	document.querySelector("#temp").innerHTML = Math.round(
 		response.data.main.temp
 	);
-	document.querySelector("#humidity").innerHTML =
-		response.data.main.humidity;
-	document.querySelector("#wind").innerHTML = Math.round(
-		response.data.wind.speed
-	);
+	document.querySelector(
+		"#humidity"
+	).innerHTML = `Humidity: ${response.data.main.humidity}%`;
+	let windSpeed = Math.round(response.data.wind.speed);
+	document.querySelector(
+		"#wind"
+	).innerHTML = `Windspeed: ${windSpeed} km/hr`;
 	document.querySelector("#description").innerHTML =
 		response.data.weather[0].main;
 	let iconElement = document.querySelector("#display-icon");
@@ -42,6 +44,8 @@ function displayWeather(response) {
 		"src",
 		`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
 	);
+
+	celsiusTemperature = response.data.main.temp;
 }
 
 function captureCity(event) {
@@ -65,11 +69,12 @@ function showCurrentLocationWeather(response) {
 	);
 	document.querySelector("#description").innerHTML =
 		response.data.weather[0].main;
-	document.querySelector("#humidity").innerHTML =
-		response.data.main.humidity;
-	document.querySelector("#wind").innerHTML = Math.round(
-		response.data.wind.speed
-	);
+	document.querySelector("#humidity").innerHTML = `Humidity:
+		${response.data.main.humidity}%`;
+	let windSpeed = Math.round(response.data.wind.speed);
+	document.querySelector(
+		"#wind"
+	).innerHTML = `Windspeed: ${windSpeed} km/hr`;
 }
 
 function handlePosition(position) {
@@ -90,3 +95,38 @@ let locationButton = document.querySelector(
 	"#location-button"
 );
 locationButton.addEventListener("click", handleClick);
+
+function displayCelsiusTemp(event) {
+	event.preventDefault();
+	celsiusLink.classList.add("active");
+	fahrenheitLink.classList.remove("active");
+	let temperatureElement = document.querySelector("#temp");
+	temperatureElement.innerHTML = Math.round(
+		celsiusTemperature
+	);
+}
+
+function displayFahrenheitTemp(event) {
+	event.preventDefault();
+	celsiusLink.classList.remove("active");
+	fahrenheitLink.classList.add("active");
+	let fahrenheitTemperature =
+		(celsiusTemperature * 9) / 5 + 32;
+	let temperatureElement = document.querySelector("#temp");
+	temperatureElement.innerHTML = Math.round(
+		fahrenheitTemperature
+	);
+}
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemp);
+
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector(
+	"#fahrenheit-link"
+);
+fahrenheitLink.addEventListener(
+	"click",
+	displayFahrenheitTemp
+);
