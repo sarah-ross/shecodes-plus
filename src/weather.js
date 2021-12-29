@@ -61,7 +61,6 @@ let form = document.querySelector("form");
 form.addEventListener("submit", captureCity);
 
 function showCurrentLocationWeather(response) {
-	console.log(response);
 	document.querySelector("#searched-city").innerHTML =
 		response.data.name;
 	document.querySelector("#temp").innerHTML = Math.round(
@@ -75,6 +74,13 @@ function showCurrentLocationWeather(response) {
 	document.querySelector(
 		"#wind"
 	).innerHTML = `Windspeed: ${windSpeed} km/hr`;
+	document.querySelector("#description").innerHTML =
+		response.data.weather[0].main;
+	let iconElement = document.querySelector("#display-icon");
+	iconElement.setAttribute(
+		"src",
+		`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+	);
 }
 
 function handlePosition(position) {
