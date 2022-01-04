@@ -24,11 +24,30 @@ if (minutes < 10) {
 let dayAndTime = document.querySelector("#day-time");
 dayAndTime.innerHTML = `Last updated: ${day}, ${hour}:${minutes}`;
 
-function displayForecast(response) {
-	console.log(response.data.daily);
-	document.querySelector("#forecast-temp").innerHTML =
-		response.data;
-}
+function displayForecast() {
+	let forecastElement = document.querySelector(
+		"#weather-forecast"
+	);
+	let forecastHTML = `<div class="row">`;
+	let days = ["Thu", "Fri", "Sat", "Sun"];
+	days.forEach(function (day) {
+
+	forecastHTML =
+		forecastHTML +
+		`
+						<div class="col">
+							<div class="forecast">
+								<img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" class="forecast-icon"/>
+									<p class="high-low" id="forecast-temp">
+									<strong">55º</strong> 22º
+								</p>
+								<p class="day">${day}</p>
+							</div>
+						</div>`;
+	});
+
+	forecastHTML = forecastHTML + `</div`;
+	forecastElement.innerHTML = forecastHTML;
 
 function handleForecastCoordinates(coordinates) {
 	let apiKey = "44123fc256cee17034c82aa49630bbea";
