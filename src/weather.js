@@ -24,6 +24,19 @@ if (minutes < 10) {
 let dayAndTime = document.querySelector("#day-time");
 dayAndTime.innerHTML = `Last updated: ${day}, ${hour}:${minutes}`;
 
+function displayForecast(response) {
+	console.log(response.data.daily);
+	document.querySelector("#forecast-temp").innerHTML =
+		response.data;
+}
+
+function handleForecastCoordinates(coordinates) {
+	let apiKey = "44123fc256cee17034c82aa49630bbea";
+	let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+
+	axios.get(apiUrl).then(displayForecast);
+}
+
 function displayWeather(response) {
 	document.querySelector("h3").innerHTML =
 		response.data.name;
@@ -46,13 +59,15 @@ function displayWeather(response) {
 	);
 
 	celsiusTemperature = response.data.main.temp;
+
+	handleForecastCoordinates(response.data.coord);
 }
 
 function captureCity(event) {
 	event.preventDefault();
 	let apiKey = "44123fc256cee17034c82aa49630bbea";
 	let city = document.querySelector("#search-form").value;
-	let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+	let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
 
 	axios.get(apiUrl).then(displayWeather);
 }
@@ -85,9 +100,9 @@ function showCurrentLocationWeather(response) {
 
 function handlePosition(position) {
 	let lat = position.coords.latitude;
-	let long = position.coords.longitude;
+	let lon = position.coords.longitude;
 	let apiKey = "44123fc256cee17034c82aa49630bbea";
-	let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`;
+	let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
 
 	axios.get(apiUrl).then(showCurrentLocationWeather);
 }
@@ -101,18 +116,3 @@ let locationButton = document.querySelector(
 	"#location-button"
 );
 locationButton.addEventListener("click", handleClick);
-
-function displayForecast(response) {
-	console.log(response);
-	document.querySelector("#forecast-temp").innerHTML =
-		response.data;
-}
-
-function handleForecastCoordinates(position) {
-	let lat = position.coords.latitude;
-	let long = position.coords.longitude;
-	let apiKey = "44123fc256cee17034c82aa49630bbea";
-	let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}`;
-
-	axios.get(apiUrl).then(displayForecast);
-}
