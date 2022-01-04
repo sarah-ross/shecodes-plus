@@ -16,6 +16,11 @@ h1 {
 	left: 10px;
 }
 
+span em {
+	font-size: 18px;
+	font-weight: 300;
+}
+
 .container1,
 .container2,
 .card {
@@ -62,18 +67,19 @@ h1 {
 	top: 15px;
 	list-style: none;
 	line-height: 27px;
-	font-size: 18px;
+	font-size: 20px;
+	font-weight: 300;
 }
 
 .forecast-icon {
-	max-width: 50px;
+	max-width: 60px;
 	padding-top: 10px;
 	padding-bottom: 8px;
 }
 
 .forecast {
 	text-align: center;
-	padding: 15px;
+	padding: 18px;
 }
 
 .high-low {
@@ -85,6 +91,8 @@ h1 {
 }
 
 .repository {
+	font-size: 14px;
+	font-weight: 300;
 	text-align: center;
 	padding: 15px;
 }
