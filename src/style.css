@@ -26,11 +26,6 @@ span em {
 .card {
 	margin: 0 auto;
 	border: none;
-}
-
-.container1,
-.container2,
-.card {
 	max-width: 800px;
 }
 
@@ -41,7 +36,7 @@ span em {
 
 .container1,
 .container2 {
-	margin-top: 40px;
+	margin-top: 36px;
 }
 
 .active {
@@ -73,8 +68,8 @@ span em {
 	right: 10px;
 	top: 15px;
 	list-style: none;
-	line-height: 27px;
-	font-size: 20px;
+	line-height: 1.5rem;
+	font-size: 1.25rem;
 	font-weight: 300;
 }
 
@@ -142,7 +137,7 @@ span em {
 	position: relative;
 	width: 76px;
 	right: -2px;
-	top: -6px;
+	top: -3px;
 }
 
 #fahrenheit-link,
