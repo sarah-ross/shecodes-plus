@@ -11,7 +11,7 @@ body {
 h1 {
 	display: inline;
 	position: relative;
-	font-size: 84px;
+	font-size: 4.5rem;
 	top: 23px;
 	left: 10px;
 }
@@ -27,6 +27,22 @@ span em {
 	margin: 0 auto;
 	border: none;
 }
+
+.container1 {
+	margin-top: 40px;
+}
+
+.container1,
+.container2,
+.card {
+	max-width: 800px;
+}
+
+.container2,
+.form {
+	padding: 20px;
+}
+
 .active {
 	color: rgb(76, 76, 76);
 	cursor: default;
@@ -37,19 +53,9 @@ span em {
 	text-decoration: none;
 }
 
-.container2,
-.form {
-	padding: 20px;
-}
-
 .list-group .list-group-horizontal .list-group-item {
 	word-wrap: normal;
 	contain: content;
-}
-
-.container1,
-.card {
-	max-width: 800px;
 }
 
 .city-heading {
@@ -72,7 +78,7 @@ span em {
 }
 
 .forecast-icon {
-	max-width: 60px;
+	max-width: 58px;
 	padding-top: 10px;
 	padding-bottom: 8px;
 }
@@ -133,17 +139,17 @@ span em {
 		);
 	border-radius: 60px;
 	position: relative;
-	width: 90px;
-	right: 5px;
-	top: -3px;
+	width: 76px;
+	right: -2px;
+	top: -6px;
 }
 
 #fahrenheit-link,
 #celsius-link {
 	position: relative;
-	top: -21px;
+	top: -15px;
 	left: 7px;
-	font-size: 22px;
+	font-size: 1.25rem;
 	text-decoration: none;
 	padding: 1px;
 }
